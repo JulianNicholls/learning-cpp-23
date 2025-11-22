@@ -8,7 +8,7 @@ using namespace std::string_literals;
 
 int main()
 {
-  Game game({constants::window_width, constants::window_height}, "Breakout V1.6"s);
+    Game game({constants::window_width, constants::window_height}, "Breakout V1.7"s);
 
-  game.loop();
+    game.loop();
 }
