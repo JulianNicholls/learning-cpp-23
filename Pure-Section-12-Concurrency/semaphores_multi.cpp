@@ -18,8 +18,7 @@ void do_work(int duration, const std::string &name)
     }
 }
 
-// std::counting_semaphore sem{3};     // Allow three threads to access the 'DB' at a time.
-std::binary_semaphore sem{1}; // Allow only one thread to access the 'DB' at a time.
+std::counting_semaphore sem{3}; // Allow three threads to access the 'DB' at a time.
 
 void worker(int duration, const std::string &name)
 {
@@ -36,8 +35,7 @@ int main()
 {
     std::vector<std::jthread> threads;
 
-    //    std::cout << "Only 3 threads will execute at a time\n\n";
-    std::cout << "Only 1 thread will execute at a time\n\n";
+    std::cout << "Only 3 threads will execute at a time\n\n";
 
     threads.emplace_back(worker, 3, "A");
     threads.emplace_back(worker, 7, "B");

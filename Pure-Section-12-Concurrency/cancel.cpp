@@ -40,5 +40,5 @@ int main()
 
     thetask.request_stop();
 
-    std::cout << "main finishedi\n";
+    std::cout << "main finished\n";
 }

@@ -16,6 +16,8 @@ void do_work(int duration, const std::string &name)
 void task()
 {
     do_work(5, "Task");
+
+    std::cout << std::endl;
 }
 
 int main()
@@ -29,6 +31,4 @@ int main()
 
     std::jthread thecpp20task(task);
     std::cout << "\nC++20 Thread started\n";
-
-    std::cout << std::endl;
 }
